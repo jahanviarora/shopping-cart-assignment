@@ -1,0 +1,47 @@
+$primary-color:#d00156;
+$accent-color:#ea1d71;
+
+.register, .signin{
+    display: flex;
+    justify-content: center;
+    aside{
+        padding: 2rem
+    }
+     input{
+         display : block;
+         width:100%;
+         border:none;
+         border-bottom: 1px solid grey;
+         padding: 1em .5em ;
+         margin : 1em 0;
+         
+
+         &:focus {
+            border: none;
+            border-bottom: 2px solid #51dae2;
+            
+        }
+
+        
+     }
+     button {
+        background: $primary-color;
+        padding: 10px 20px;
+        color: white;
+        border: none;
+        width: 100%;
+        margin: 2em 0;
+        cursor: pointer;
+    }
+
+    @media only screen and(max-width:550px) {
+        aside {
+            padding: 1em 3em;
+        }
+
+        .register-form {
+            padding: 0 3em;
+            width: 100%;
+        }
+    }
+}
