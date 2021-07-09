@@ -1,0 +1,70 @@
+//screen size
+$tab: 575px;
+$desktop: 770px;
+$primary-color:#d00156;
+$accent-color:#ea1d71;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: white;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    left: 5%;
+    height: 10px;
+    z-index: -1;
+    background: radial-gradient(at 50% 0, rgba(0, 0, 0, 0.5), transparent 70%);
+}
+
+ 
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  
+
+  
+}
+.logo {
+  width: 10rem;
+  padding: 10px;
+ 
+}
+
+.cart-wrap {
+ 
+  background: rgba(202, 195, 195, 0.705);
+  padding: 5px 5px;
+  display: flex;
+ 
+  margin-right: 10%;
+  border: none;
+
+  svg {
+    color: $primary-color;
+    margin-right: 5px;
+  }
+  span {
+    font-weight: 10;
+  }
+}
+
+
+
+@media only screen and (min-width: $tab) {
+    .toggler {
+      display: none;
+    }
+    
+    .cart-wrap {
+      margin-top: 1rem;
+    }
+  }

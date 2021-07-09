@@ -1,0 +1,74 @@
+@import "../../../styles/global.scss";
+
+$extra-small-font: 1rem;
+$small-font: 1rem;
+$medium-font: 1.6rem;
+$semi-large-font: 1.8rem;
+$large-font: 2rem;
+$extra-large-font: 2.4rem;
+//screen size
+$tab: 575px;
+$desktop: 770px;
+
+.navbar-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    display: flex;
+    font-weight: 600;
+    font-size: 12px;
+    flex-direction: column;
+    margin-right: auto;
+    background-color: white;
+    
+    li {
+      border-bottom: 0.1rem solid darkgrey;
+      padding: 5px;
+      list-style: none;
+    text-decoration: none;
+      
+      a {
+        color: black;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      &:hover {
+        background: grey;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tab) {
+  .navbar-link {
+    position: unset;
+    width: unset;
+    ul {
+      flex-direction: row;
+      list-style: none;
+    text-decoration: none;
+      li {
+        border-bottom: unset;
+        &:hover {
+          background: unset;
+        }
+      }
+    }
+    .main-links {
+      position: absolute;
+      left: 30%;
+      li a {
+        font-size: $medium-font;
+        line-height: $large-font;
+        font-weight: 700;
+      }
+    }
+    .side-links {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
