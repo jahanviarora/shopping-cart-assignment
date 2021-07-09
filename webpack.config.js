@@ -12,6 +12,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
 
 module.exports={
    
+   
     entry:'./src/index.js',
    
         resolve:{
