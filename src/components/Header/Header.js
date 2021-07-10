@@ -12,13 +12,13 @@ const Header = () => {
  console.log(json);
 
   return (
-    <header>
+    <header role="banner">
       <section className="container">
-        <nav className="navbar">
+        <nav className="navbar" aria-label="Main Navigation" ole="navigation">
           <section className="logo">
             <BrowserRouter>
              
-                <Image name={`logo.png`} alt="Sabka Bazaar logo"></Image>
+                <Image name={`logo.png`} alt="Sabka Bazaar logo" tabIndex={0}></Image>
               
             </BrowserRouter>
           </section>
@@ -26,7 +26,7 @@ const Header = () => {
           
           <section className='flex'>
           <Link to="/cart">
-          <button className='cart-wrap' >
+          <button className='cart-wrap'  tabIndex={0}>
           <FontAwesomeIcon icon={faShoppingCart} />
               <span> {json ==null ? 0 : json.length} Items</span>
             </button>

@@ -47,31 +47,36 @@ const [userValidation, setUserValidation]= useState({
              <p> We dont share your personal Details with anyone</p>
          </aside>
          <section className='register-form'>
-             <form onSubmit={onFormSubmit}>
-                 <input placeholder='First Name' required value={userDetails.fName} 
+             <form onSubmit={onFormSubmit} onKeyPress={onFormSubmit} tabIndex={0}>
+                 <input placeholder='First Name' aria-label="First Name"
+                    title="FirstName" required value={userDetails.fName} 
                  onChange={(e)=>{
                      setUserDetails({...userDetails, fName: e.target.value})
                  }}/>
-                   <input placeholder='Last Name' required value={userDetails.lName} 
+                   <input placeholder='Last Name' aria-label="Last Name"
+                    title="Last Name" required value={userDetails.lName} 
                  onChange={(e)=>{
                      setUserDetails({...userDetails, lName: e.target.value})
                  }}/>
-                   <input placeholder='Email' required value={userDetails.email} 
+                   <input placeholder='Email' aria-label="Email"
+                    title="Email"required value={userDetails.email} 
                  onChange={(e)=>{
                      setUserDetails({...userDetails, email: e.target.value})
                  }}/>
-                   <input placeholder='Password' required value={userDetails.password} 
+                   <input placeholder='Password' aria-label="Password"
+                    title="Password"required value={userDetails.password} 
                  onChange={(e)=>{
                      setUserDetails({...userDetails, password: e.target.value})
                  }}/>
-                   <input placeholder='Confirm Password' required value={userDetails.confirmPswd} 
+                   <input placeholder='Confirm Password' aria-label="Confirm Password"
+                    title="Confirm Passowrd"required value={userDetails.confirmPswd} 
                  onChange={(e)=>{
                      setUserDetails({...userDetails, confirmPswd: e.target.value})
                  }}/>
                  <p>
                      {userValidation.statusErrorMessage || userValidation.statusSuccessMessage}
                  </p>
-                 <button> SignUp</button>
+                 <button > Sign Up</button>
              </form>
          </section>
      </div>

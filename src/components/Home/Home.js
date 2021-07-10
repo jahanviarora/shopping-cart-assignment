@@ -92,7 +92,7 @@ const Home = () => {
                 <img
                   className="category-image"
                   src={category.imageUrl}
-                
+                  tabIndex={0}
                   alt={category.name}
                 />
               </div>

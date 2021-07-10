@@ -17,6 +17,7 @@ const ProductDetails = ({ products }) => {
           className="product-image"
           src={products.imageURL}
           alt={products.name}
+          tabIndex={0}
         ></img>
         <div className="product-description">{products.description} </div>
       </div>
@@ -27,6 +28,7 @@ const ProductDetails = ({ products }) => {
           className="buy-button"
           onClick={() => buyNowHandeler(products)}
           tabIndex={0}
+          onKeyPress={() => buyNowHandeler(products)}
         >
           Buy Now <span className="button-price"> @ Rs. {products.price}</span>
         </button>

@@ -21,6 +21,7 @@ const Carousel = ({ data }) => {
         className="banner-image"
         src={data[activeIndex].bannerImageUrl}
         alt={data[activeIndex].bannerImageAlt}
+        tabIndex={0}
       />
       <div className="banner-dots">
         {data.map((item) => (
@@ -34,7 +35,7 @@ const Carousel = ({ data }) => {
           />
         ))}
       </div>
-      <button type="button" className="next" onClick={onNext} >
+      <button type="button" className="next" onClick={onNext} tabIndex={0} onKeyPress={onNext}>
         NEXT
       </button>
     </div>

@@ -28,9 +28,11 @@ const onFormSubmit = (e)=>{
                 <p>Get access to your orders, wishlist and recommedations</p>
             </aside>
             <section className='signin-form'>
-                <form onSubmit={onFormSubmit}>
+                <form onSubmit={onFormSubmit} onKeyPress={onFormSubmit} tabIndex={0}>
                     <input
                     placeholder="Email"
+                    aria-label="Email"
+                    title="Email"
                     required
                     value= {userDetails.email}
                     onChange={(e)=>{
@@ -38,6 +40,8 @@ const onFormSubmit = (e)=>{
                     }}/>
                     <input
                     placeholder="Password"
+                    aria-label="Password"
+                    title="Password"
                     required
                     value= {userDetails.password}
                     onChange={(e)=>{
