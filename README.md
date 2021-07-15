@@ -13,3 +13,14 @@ npm run start
 yarn install
 yarn start
 ```
+
+Start Server
+
+npm run startserver
+
+Start Client Side
+
+Run following command to run website on localhost:3000:
+
+npm run start
+
